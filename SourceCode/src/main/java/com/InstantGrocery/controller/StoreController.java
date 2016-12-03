@@ -134,6 +134,15 @@ public class StoreController {
     public String editproduct(@PathVariable int productId, Model model) {
         Product product = productDao.getProductById(productId);
         productDao.editProduct(product);
+
+        List<ProductCategory> categorylist = categoryDao.getAllCategory();
+
+        List<String> categoryNameList = new ArrayList<>();
+        for (ProductCategory aCategory: categorylist) {
+            categoryNameList.add(aCategory.getCategoryName());
+        }
+
+        model.addAttribute("categorylist",categoryNameList);
         model.addAttribute("product", product);
         return "edit-product";
     }

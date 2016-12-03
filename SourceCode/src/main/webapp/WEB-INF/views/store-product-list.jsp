@@ -33,9 +33,9 @@
                     <td>${product.unitInStock}</td>
                     <td>${product.brand}</td>
                     <td>
-                        <a href="<spring:url value="/admin/category/edit-category/${product.productId}"/>">
+                        <a href="<spring:url value="/store/product/edit-product/${product.productId}"/>">
                             <span class="glyphicon glyphicon-pencil"></span></a>
-                        <a href="<spring:url value="/admin/category/delete-category/${product.productId}"/>">
+                        <a href="<spring:url value="/store/product/delete-product/${product.productId}"/>">
                             <span class="glyphicon glyphicon-remove"></span></a>
                     </td>
                 </tr>
